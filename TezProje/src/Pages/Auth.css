@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background-image: url("../images/Foto6.jpg"); /*Resim yolu */
+
+  background-size: cover; /* Resmi tamamen kaplar */
+  background-position: center; /* Resmi ortalar */
+  background-repeat: no-repeat; /* Tekrar etmesini engeller */
+  position: relative; /* Diğer elemanlar için pozisyon ayarı */
+}
+.nav-button {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
+.form-box {
+  position: relative;
+  display: flex; /*Taşıyıcı elemana tanımlanan flex özelliği taşıyıca esneklik kazandırır. Böylece alt elemanlar taşıyıcı içerisinde kolay bir şekilde yerleştirilebilir hale gelir.*/
+  align-items: center;
+  justify-content: center; /*justify-content özelliği sayesinde boşlukları yönetebilir ve öğeleri istediğiniz şekilde hizalayabilirsiniz.*/
+  width: 512px;
+  height: 650px;
+  overflow: hidden; /*hidden özelliğinde, taşma kırpılır ve içeriğin geri kalanı gizlenir.*/
+  z-index: 2;
+  margin-bottom: 200px;
+}
+.login-container {
+  position: absolute;
+  left: 4px;
+  width: 500px;
+  display: flex;
+  flex-direction: column; /*"flex-direction: column" söz dizimini kullandığımız zaman içeriklerimizi yukarıdan aşağıya doğru sıralayacaktır. */
+  transition: 0.5s ease-in-out; /*Yavaş bir bitiş geçiş efekti belirtir. ease-in-out – Yavaş başlangıç-bitiş geçiş efekti belirtir.*/
+}
+
+.register-container {
+  position: absolute;
+  left: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column; /*"flex-direction: column" söz dizimini kullandığımız zaman içeriklerimizi yukarıdan aşağıya doğru sıralayacaktır. */
+  transition: 0.5s ease-in-out; /*Yavaş bir bitiş geçiş efekti belirtir. ease-in-out – Yavaş başlangıç-bitiş geçiş efekti belirtir.*/
+  margin-bottom: 50px;
+}
+
+.top span {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.top span a {
+  font-weight: 500;
+  color: #fff;
+  margin-left: 5px;
+}
+
+header {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+.two-forms {
+  display: flex;
+  gap: 10px;
+}
+.input-field {
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  padding: 0 10px 0 45px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.2s ease;
+}
+.input-field:hover,
+.input-field:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid aqua;
+  transition: 0.3s ease-in-out;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+.input-box {
+  margin: 0px 0px;
+}
+.input-box i {
+  position: relative; /* normal konumuna göre konumlandırılmıştır.*/
+  top: -35px;
+  left: 17px;
+  color: #fff;
+}
+.submit {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  outline: none; /*CSS outline özelliği dış çizgi için renk, genişlik gibi özellikleri belirler*/
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.submit:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.5);
+  border: 2px solid aqua;
+}
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  margin-top: 10px;
+}
+.two-col .one {
+  display: flex;
+  gap: 5px; /*gap CSS özelliği flexbox, grid ve multi-column yapılarda esnek öğeler arasındaki boşluğu ayarlamak için kullanılmaktadır. */
+}
+.two label a {
+  text-decoration: none; /*bir metin üzerindeki varsayılan altı çizgiyi kaldırmak için kullanılır.*/
+  color: #fff;
+}
+.two label a:hover {
+  text-decoration: underline;
+}
+.remember {
+  color: #fff;
+}
+.checkbox {
+  width: 15px;
+  color: black;
+}
+.h3 {
+  font-size: 2rem; /* Yazı boyutu */
+  color: #6ec1e4; /* Açık mavimsi yazı rengi */
+  text-align: center; /* Ortaya hizalar */
+  margin-bottom: 20px; /* Alt boşluk */
+  font-weight: bold; /* Kalın yazı */
+  font-family: "Poppins", sans-serif; /* Şık yazı tipi */
+  text-transform: capitalize; /* İlk harfi büyük yapar */
+  letter-spacing: 1px; /* Harf arası mesafe */
+  position: relative; /* Pseudo element için gerekli */
+}
+
+.h3::after {
+  content: ""; /* Pseudo element */
+  display: block;
+  width: 60px; /* Çizgi genişliği */
+  height: 3px; /* Çizgi yüksekliği */
+  background-color: #007acc; /* Açık mavi çizgi rengi */
+  margin: 10px auto 0; /* Ortalanmış çizgi */
+  border-radius: 2px; /* Hafif yuvarlatılmış çizgi */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+.back-to-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-to-login a {
+  color: #007acc; /* Mavi renk */
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif; /* Aynı fontu kullandık */
+  letter-spacing: 1px; /* Harf arası mesafe */
+  transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+.back-to-login a:hover {
+  color: #005fa3; /* Hoverda koyu mavi renk */
+  text-decoration: underline; /* Altı çizili hale gelir */
+}
+.input-fields {
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  padding: 0 10px 0 45px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.2s ease;
+
+  padding-right: 30px; /* Çarpı ikonu için sağda yer açar */
+}
+.input-fields:hover,
+.input-fields:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid aqua;
+  transition: 0.3s ease-in-out;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 20px; /* Sağ tarafa yerleştirildi */
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 15px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.clear-icon:hover {
+  color: #000; /* Hoverda renk değişimi */
+  opacity: 0.7;
+}
+.input-wrapper {
+  position: relative;
+}
+.password-submit {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  outline: none; /*CSS outline özelliği dış çizgi için renk, genişlik gibi özellikleri belirler*/
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.password-submit:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.5);
+  border: 2px solid aqua;
+}
+
+.header2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0099ff;
+}
+
+.p2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6ec1e4;
+}
+
+.reset-password-container .password-box .fa-eye,
+.reset-password-container .password-box .fa-eye-slash {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+.reset-error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.reset-success-message {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.password-box .fa-eye,
+.password-box .fa-eye-slash {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  transform: translateY(-50%);
+  color: #ede5e5;
+  left: 460px;
+}
+.password-box {
+  position: relative;
+}
+.register-container .password-box .fa-eye,
+.register-container .password-box .fa-eye-slash {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  transform: translateY(-50%);
+  color: #ede5e5;
+  left: 460px;
+}
+.reset-error-message,
+.reset-success-message {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.reset-error-message {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.reset-success-message {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.password-container form .input-box .fa-eye,
+.password-container form .input-box .fa-eye-slash {
+  position: absolute;
+  left: 470px;
+  top: 63%;
+  transform: translateY(-50%);
+  color: #d8cbcb;
+  cursor: pointer;
+}
+.password-container form .input-box .i .fa-eye,
+.password-container form .input-box .i .fa-eye-slash {
+  position: absolute;
+  left: 470px;
+  top: 52%;
+  transform: translateY(-50%);
+  color: #d8cbcb;
+  cursor: pointer;
+}

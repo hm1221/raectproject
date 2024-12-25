@@ -1,0 +1,371 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff; /* Pastel bir arka plan */
+  color: #333;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+}
+.baslık {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  /* Yumuşak geçişli bir degrade arka plan */
+}
+.h33 {
+  font-family: serif;
+  font-size: 30px;
+  color: #093e77;
+}
+.publish-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 120px;
+  height: 100vh;
+
+  box-sizing: border-box;
+}
+
+.form-section {
+  background: rgb(255, 249, 249);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Daha belirgin bir gölge efekti */
+  padding: 20px;
+  width: 30%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 120px;
+}
+
+.form-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #064f9c !important; /* Daha canlı bir başlık rengi */
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+  transition: border-color 0.3s;
+}
+.form-group input:hover {
+  border: none;
+  border-bottom: 2px solid;
+  border-color: #007bff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.publish-button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 40px;
+}
+
+.publish-button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+.image-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Görsele biraz gölge ekleyerek daha belirgin hale getirme */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publish-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.date-picker .date-icon {
+  color: #007bff;
+  font-size: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.form-group .date-inputs {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* İkon için boşluk */
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+  transition: border-color 0.3s;
+  border-radius: 20px;
+}
+.form-group .date-inputs:hover {
+  border: none;
+  border-bottom: 2px solid;
+  border-color: #007bff;
+}
+
+.form-group .date-inputs:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group i {
+  position: relative;
+  top: 40px;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #093e77;
+  cursor: pointer;
+}
+.input-field::placeholder {
+  color: gray;
+  font-size: 17px;
+}
+.date-inputs::placeholder {
+  color: gray;
+  font-size: 18px;
+}
+.form-group label i {
+  bottom: 100px;
+}
+.fa-calendar-alt .a {
+  position: absolute;
+}
+.react-datepicker__input-container {
+  width: 100% /* Genişliği tam yap */ !important;
+  display: block; /* Blok olarak konumlandır */
+}
+
+.date-inputs {
+  width: 100% !important; /* Tam genişlik için */
+  box-sizing: border-box; /* Padding ve border genişliğe dahil */
+}
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+.form-group .fa-calendar-alt {
+  position: relative;
+  top: 28px;
+  cursor: pointer;
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.publish-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+  box-sizing: border-box;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-title {
+  font-size: 28px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 40%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-title {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.slogan-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px 20px;
+  background-color: #054652;
+}
+
+.slogan-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #b4b8bb;
+  margin-bottom: 30px;
+}
+
+.slogan-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slogan-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  background-color: #c4c1c1;
+}
+
+.slogan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 20px;
+  color: #353637;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/*PublishForm*/
+.publishForm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  background: linear-gradient(135deg, #f3f8fd, #d1e7f7);
+}
+
+.publishForm-title {
+  text-align: center;
+  font-size: 34px;
+  color: #0056b3;
+  margin-bottom: 40px;
+}
+
+.publishForm-group {
+  position: relative;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.publishForm-icon {
+  position: absolute;
+  top: 22%;
+  left: 85px;
+  transform: translateY(-50%);
+  color: #3f4246;
+}
+
+.publishForm-input {
+  font-size: 15px;
+  background: rgba(128, 128, 128, 0.2);
+  color: #141313;
+  height: 50px;
+  width: 80%;
+  padding: 0 10px 0 45px;
+  margin-left: 70px;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.2s ease;
+}
+.publishForm-input::placeholder {
+  color: #605e5e;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.publishForm-input:hover,
+.publishForm-input:focus {
+  background: rgba(172, 171, 171, 0.2);
+  border: 3px solid rgb(36, 149, 230);
+  transition: 0.3s ease-in-out;
+}
+
+.publishForm-button {
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 70px;
+  color: white;
+  height: 45px;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 30px;
+  outline: none; /*CSS outline özelliği dış çizgi için renk, genişlik gibi özellikleri belirler*/
+  background: rgb(34, 95, 186);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.publishForm-button:hover {
+  background: white;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgb(34, 95, 186);
+  color: rgb(34, 95, 186);
+  font-size: 17px;
+  font-weight: 700;
+}
