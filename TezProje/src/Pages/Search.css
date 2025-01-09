@@ -1,0 +1,53 @@
+/* Search Sayfası CSS (özelleştirilmiş isimler) */
+html,
+body {
+  height: auto; /* Tüm içeriği kapsaması için */
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Dikey kaydırma çubuğunu her zaman gösterir */
+  scroll-behavior: smooth; /* Yumuşak geçiş için */
+}
+.search-submit {
+  border: none;
+  font-size: 17px;
+}
+.search-page-header {
+  color: #1a237e;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.search-page-popular-routes {
+  width: 90%;
+}
+
+.search-page-popular-routes-header {
+  margin-left: 50px;
+  font-size: 24px;
+  color: #1a237e;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.search-page-popular-routes-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.search-page-popular-route-item {
+  padding: 15px;
+
+  border-top: 1px solid #aaa9a9;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-page-popular-route-item:hover {
+  background-color: rgb(133, 133, 133);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}

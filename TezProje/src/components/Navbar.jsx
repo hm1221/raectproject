@@ -32,7 +32,7 @@ const Navbar = () => {
 
       {/* Ara ve Yolculuk Yayınla */}
       <div className="navbar-center">
-        <Link to="/search" className="nav-link">
+        <Link to="/Search" className="nav-link">
           <i className="fas fa-search"></i> Ara
         </Link>
         <Link to="/publish" className="nav-link">

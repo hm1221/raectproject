@@ -11,13 +11,16 @@ registerLocale("tr", tr); // Türkçe dil ayarı
 const Publish = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const datePickerRef = useRef(null);
-
+  const [startCity, setStartCity] = useState(""); // "Nereden" için stateconst [startCity, setStartCity] = useState(""); // "Nereden" için state
+  const [endCity, setEndCity] = useState("");
   // Takvimi açan fonksiyon
   const openDatePicker = () => {
     if (datePickerRef.current) {
       datePickerRef.current.setOpen(true);
     }
   };
+  console.log(startCity);
+  console.log(endCity);
   return (
     <>
       <section className="baslık">
@@ -39,6 +42,7 @@ const Publish = () => {
                 id="from"
                 className="input-field"
                 placeholder="Nereden"
+                onChange={(e) => setStartCity(e.target.value)}
               />
             </div>
           </div>
@@ -53,6 +57,7 @@ const Publish = () => {
                 id="to"
                 className="input-field"
                 placeholder="Nereye"
+                onChange={(e) => setEndCity(e.target.value)}
               />
             </div>
           </div>
@@ -70,7 +75,8 @@ const Publish = () => {
               ref={datePickerRef} // Datepicker referansı
             />
           </div>
-          <Link to="/PublishFrom">
+
+          <Link to="/PublishFrom" state={{ startCity, endCity }}>
             <button className="publish-button">Yayınla</button>
           </Link>
         </div>

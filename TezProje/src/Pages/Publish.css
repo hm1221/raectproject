@@ -294,23 +294,25 @@ body {
 /*PublishForm*/
 .publishForm-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  align-items: left;
   padding-top: 100px;
   height: 100vh;
   background: linear-gradient(135deg, #f3f8fd, #d1e7f7);
 }
 
 .publishForm-title {
-  text-align: center;
+  text-align: left;
   font-size: 34px;
   color: #0056b3;
   margin-bottom: 40px;
+
+  margin-left: 70px;
 }
 
 .publishForm-group {
   position: relative;
-  width: 60%;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -368,4 +370,316 @@ body {
   color: rgb(34, 95, 186);
   font-size: 17px;
   font-weight: 700;
+}
+
+.rota-header {
+  font-size: 30px;
+  color: #0056b3;
+}
+
+.rota-ul {
+  margin-top: 10px;
+  list-style-type: none;
+}
+.rota-li {
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+
+  position: relative;
+  padding-left: 35px;
+  user-select: none;
+  color: #333;
+}
+
+.rota-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+.rota-input::after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Checkbox Container */
+.checkbox-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  user-select: none;
+  color: #333;
+}
+
+/* Gizli Checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  z-index: 1;
+}
+
+/* Özel Checkbox Stili */
+.checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #f9f9f9;
+  border: 3px solid #888787;
+  border-radius: 6px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Hover Efekti */
+.checkbox-container:hover input ~ .checkbox-custom {
+  border-color: #4caf50;
+}
+
+/* Seçili Olduğunda */
+.checkbox-container input:checked ~ .checkbox-custom {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+/* Check İşareti */
+
+/* İşareti Göster */
+.checkbox-container input:checked ~ .checkbox-custom::after {
+  display: block;
+}
+
+.checkbox-container label {
+  margin-left: 16px;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Hover Efekti */
+.checkbox-container:hover label {
+  color: #1a1a1a;
+}
+
+/* Seçili Olduğunda Yazı Rengi */
+.checkbox-container input:checked ~ label {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.rota-button {
+  margin-top: 30px;
+  margin-left: 250px;
+  margin-bottom: 5px;
+  width: 30%;
+  border-radius: 20px;
+  padding: 8px;
+  background: transparent;
+  color: #0056b3;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 3px solid #0056b3;
+}
+.rota-button:hover {
+  opacity: 0.9;
+  border: 3px solid white;
+  background-color: #0056b3;
+  color: white;
+}
+
+.publishplus-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.publishplus-left-panel {
+  flex: 1;
+  width: 40%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.publishplus-header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.publishplus-search {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 3px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.publishplus-search::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.publishplus-search:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.publishplus-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.publishplus-checkbox-item {
+  display: flex;
+
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 95%;
+  margin-left: 15px;
+}
+
+.publishplus-checkbox-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.02);
+  border: 1px solid #007bff;
+}
+
+.publishplus-checkbox-item.selected {
+  background-color: #e6f7ff;
+  border-color: #007bff;
+}
+
+.publishplus-checkbox-item input {
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+.publishplus-selected-header {
+  margin-top: 20px;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.publishplus-selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.publishplus-selected-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publishplus-selected-item .publishplus-remove {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.publishplus-selected-item .publishplus-remove:hover {
+  color: #ff4d4d;
+}
+
+.publishplus-right-panel {
+  flex: 1;
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 60%;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.publishplus-map {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: red;
+}
+.publishplus-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #47c77c, #6ed995);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.publishplus-selected-header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  background: linear-gradient(to right, #0f8b66, #121d16);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }

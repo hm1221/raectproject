@@ -9,6 +9,10 @@ import HomePage from "./Pages/HomePage";
 import Publish from "./Pages/Publish";
 import PublishFrom from "./Pages/PublishFrom";
 import PublishTo from "./Pages/PublishTo";
+import Search from "./Pages/Search";
+import PublishPlus from "./Pages/PublishPlus";
+import Card from "./Pages/Card";
+import MainPage from "./Pages/MainPage";
 
 function App() {
   return (
@@ -29,6 +33,10 @@ function App() {
           <Route path="Publish" element={<Publish />} />
           <Route path="PublishFrom" element={<PublishFrom />} />
           <Route path="PublishTo" element={<PublishTo />} />
+          <Route path="Search" element={<Search />} />
+          <Route path="PublishPlus" element={<PublishPlus />} />
+          <Route path="Card" element={<Card />} />
+          <Route path="MainPage" element={<MainPage />} />
         </Route>
       </Routes>
     </Router>
